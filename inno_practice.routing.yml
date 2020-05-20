@@ -1,0 +1,61 @@
+inno_practice.show_value_form:
+  path: '/show_value'
+  defaults:
+    _title: 'Show Value'
+    _form: '\Drupal\inno_practice\Form\ShowForm'
+  requirements:
+    _permission: 'access content'
+
+inno_practice.practice_admin_settings:
+  path: '/admin/config/welcome/adminsettings'
+  defaults:
+    _title: 'Alert Message'
+    _form: '\Drupal\inno_practice\Form\AdminMessageForm'
+  requirements:
+    _permission: 'access content'
+
+modal_form_example.form:
+  path: '/admin/config/example_form'
+  defaults:
+    _form: 'Drupal\inno_practice\Form\ExampleForm'
+    _title: 'Example Form'
+  requirements:
+    _permission: 'administer site configuration'
+
+modal_form_example.open_modal_form:
+  path: '/admin/config/modal_form'
+  defaults:
+    _title: 'Modal Form'
+    _controller: '\Drupal\inno_practice\Controller\ModalFormExampleController::openModalForm'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+
+inno_practice.show_custom_logs:
+  path: '/admin/dashboard/customlogs'
+  defaults:
+    _title: 'Custom Log Dashboard'
+    _controller: '\Drupal\inno_practice\Controller\InnoCustomLogs::showCustomLogs'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+
+inno_practice.show_custom_detail_log:
+  path: '/admin/dashboard/customdetaillog/{log_id}'
+  defaults:
+    _title: 'Custom Detail Log'
+    _controller: '\Drupal\inno_practice\Controller\InnoCustomDeatilLog::showCustomDetailLog'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+
+inno_practice.delete_log:
+  path: '/admin/delete/{log_id}/customdetaillog'
+  defaults:
+    _controller: '\Drupal\inno_practice\Controller\DeleteCustomLogController::openModalForm'
+    _title: 'Delete Custom Log'
+  requirements:
+    _permission: 'administer site configuration'

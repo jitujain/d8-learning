@@ -1,0 +1,5 @@
+name: Practice Module
+description: Will contain practice module.
+type: module
+version: 1.0
+core: 8.x

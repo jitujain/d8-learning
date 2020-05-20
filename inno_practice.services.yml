@@ -1,0 +1,4 @@
+services:
+  inno_practice.custom_logging:
+    class: Drupal\inno_practice\Controller\CustomLogging
+    arguments: ['@database']

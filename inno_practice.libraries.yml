@@ -1,0 +1,19 @@
+notice_block:
+  version: 1.x
+  css:
+    theme:
+      css/notice_block.css: {}
+  js:
+    js/notice_block.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupalSettings
+
+message_alert:
+  version: 1.x
+  js:
+    js/message_alert.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
